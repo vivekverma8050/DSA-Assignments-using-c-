@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int findMin(int arr[], int n) {
+    int min = arr[0];  // Assume first element is minimum
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < min) {
+            min = arr[i];  // Update min if current element is smaller
+        }
+    }
+    return min;
+}
+
+int main() {
+    int arr[] = {5, 2, 7, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    int minimum = findMin(arr, n);
+    printf("Minimum value in the array is: %d\n", minimum);
+
+    return 0;
+}
